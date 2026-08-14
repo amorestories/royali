@@ -43,7 +43,6 @@ const MILESTONES = [
   { year: "2021", text: "First titles published. Early breakout success in paranormal romance." },
   { year: "2022", text: "Crossed 200 titles. Established author development and editorial pipeline." },
   { year: "2023", text: "Expanded to 6 languages. Authors reaching readers across four continents." },
-  { year: "2024", text: "500+ titles live. Proprietary production tools accelerating author output." },
   { year: "2025", text: "1,000+ titles. New authors onboarded across multiple romance verticals." },
   { year: "2026", text: "Expanding our author roster and entering new romance verticals." },
 ];
