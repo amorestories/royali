@@ -33,7 +33,6 @@ const AUTHORS = [
 
 const STATS = [
   { label: "Titles Published", value: "1,000+" },
-  { label: "Monthly Readers", value: "2M+" },
   { label: "Languages", value: "6" },
   { label: "Authors", value: "10+" },
 ];
