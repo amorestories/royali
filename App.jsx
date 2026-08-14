@@ -46,7 +46,7 @@ const MILESTONES = [
   { year: "2023", text: "Expanded to 6 languages. Authors reaching readers across four continents." },
   { year: "2024", text: "500+ titles live. Proprietary production tools accelerating author output." },
   { year: "2025", text: "800+ titles. New authors onboarded across multiple romance verticals." },
-  { year: "2026", text: "Inc. 5000 debut. Expanding author roster and entering new verticals." },
+  { year: "2026", text: "Expanding our author roster and entering new romance verticals." },
 ];
 
 function AnimatedCounter({ value }) {
