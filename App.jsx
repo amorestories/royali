@@ -46,7 +46,7 @@ const MILESTONES = [
   { year: "2023", text: "Expanded to 6 languages. Authors reaching readers across four continents." },
   { year: "2024", text: "500+ titles live. Proprietary production tools accelerating author output." },
   { year: "2025", text: "800+ titles. New authors onboarded across multiple romance verticals." },
-  { year: "2026", text: "Inc. 5000 debut. Expanding author roster and entering new verticals." },
+  { year: "2026", text: "Expanding our author roster and entering new romance verticals." },
 ];
 
 function AnimatedCounter({ value }) {
@@ -322,6 +322,52 @@ function HomePage({ setPage }) {
               border: "1px solid rgba(198,163,112,0.3)", borderRadius: 8,
               padding: "12px 32px", cursor: "pointer", transition: "all 0.3s",
             }}>View All Authors →</button>
+          </div>
+        </div>
+      </section>
+
+      <section style={{
+        padding: "88px clamp(20px, 5vw, 80px)",
+        borderTop: "1px solid rgba(198,163,112,0.1)",
+      }}>
+        <div style={{
+          maxWidth: 1000, margin: "0 auto", padding: "clamp(32px, 5vw, 56px)",
+          background: "linear-gradient(135deg, rgba(198,163,112,0.12), rgba(198,163,112,0.03))",
+          border: "1px solid rgba(198,163,112,0.25)", borderRadius: 18,
+          display: "grid", gridTemplateColumns: "auto 1fr", gap: 36, alignItems: "center",
+        }} className="author-card-grid">
+          <div style={{
+            width: 112, height: 112, borderRadius: "50%",
+            background: "linear-gradient(135deg, #C6A370, #8B6914)",
+            color: "#0A0A0C", display: "flex", flexDirection: "column",
+            alignItems: "center", justifyContent: "center", flexShrink: 0,
+            boxShadow: "0 10px 40px rgba(198,163,112,0.2)",
+          }}>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em" }}>AMAZON</span>
+            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, lineHeight: 1 }}>#44</span>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em" }}>KINDLE</span>
+          </div>
+          <div>
+            <div style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 12, fontWeight: 600,
+              letterSpacing: "0.2em", textTransform: "uppercase", color: "#C6A370", marginBottom: 10,
+            }}>Amazon Top 50 Bestselling Authors</div>
+            <h2 style={{
+              fontFamily: "'Playfair Display', serif", fontSize: "clamp(25px, 3.5vw, 38px)",
+              fontWeight: 600, color: "#FAFAF8", lineHeight: 1.15, marginBottom: 12,
+            }}>Bookish Girl’s Emergency Contact Is a Lycan King</h2>
+            <p style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 16,
+              color: "rgba(255,255,255,0.58)", lineHeight: 1.65, marginBottom: 20,
+            }}>
+              By Elara Haze &amp; K.A. Iris — a #1 Werewolf &amp; Shifter Romance bestseller,
+              ranked #44 across the entire Kindle Store.
+            </p>
+            <a href="https://www.amazon.com/dp/B0H46877JM" target="_blank" rel="noopener noreferrer" style={{
+              display: "inline-block", fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
+              color: "#C6A370", textDecoration: "none", border: "1px solid rgba(198,163,112,0.35)",
+              borderRadius: 7, padding: "10px 22px",
+            }}>View the Bestseller on Amazon →</a>
           </div>
         </div>
       </section>
