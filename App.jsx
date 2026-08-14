@@ -32,7 +32,7 @@ const AUTHORS = [
 ];
 
 const STATS = [
-  { label: "Titles Published", value: "800+" },
+  { label: "Titles Published", value: "1,000+" },
   { label: "Monthly Readers", value: "2M+" },
   { label: "Languages", value: "6" },
   { label: "Authors", value: "10+" },
@@ -45,7 +45,7 @@ const MILESTONES = [
   { year: "2022", text: "Crossed 200 titles. Established author development and editorial pipeline." },
   { year: "2023", text: "Expanded to 6 languages. Authors reaching readers across four continents." },
   { year: "2024", text: "500+ titles live. Proprietary production tools accelerating author output." },
-  { year: "2025", text: "800+ titles. New authors onboarded across multiple romance verticals." },
+  { year: "2025", text: "1,000+ titles. New authors onboarded across multiple romance verticals." },
   { year: "2026", text: "Expanding our author roster and entering new romance verticals." },
 ];
 
@@ -185,19 +185,18 @@ function HomePage({ setPage }) {
                 fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.08,
                 color: "#FAFAF8", margin: "0 0 24px",
               }}>
-                Where the Best<br />
+                Home to Amazon<br />
                 <span style={{
                   background: "linear-gradient(135deg, #C6A370 0%, #E8D5B0 50%, #C6A370 100%)",
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-                }}>Romance Authors</span><br />
-                Call Home
+                }}>Top 50 Authors</span>
               </h1>
               <p style={{
                 fontFamily: "'DM Sans', sans-serif", fontSize: "clamp(16px, 1.8vw, 19px)",
                 color: "rgba(255,255,255,0.55)", maxWidth: 480, margin: "0 0 40px",
                 lineHeight: 1.65, fontWeight: 400,
               }}>
-                We publish the authors behind the best-selling romantasy, romcom, and dark romance books readers have come to love.
+                Millions of copies sold across the romance stories readers adore.
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 <button onClick={() => setPage("Authors")} style={{
@@ -451,6 +450,15 @@ function AuthorsPage() {
                 fontFamily: "'DM Sans', sans-serif", fontSize: 16,
                 color: "rgba(255,255,255,0.5)", lineHeight: 1.7, maxWidth: 500,
               }}>{a.bio}</p>
+              {a.storeUrl && (
+                <a href={a.storeUrl} target="_blank" rel="noopener noreferrer" style={{
+                  display: "inline-block", marginTop: 18,
+                  fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
+                  color: "#C6A370", textDecoration: "none",
+                  border: "1px solid rgba(198,163,112,0.3)", borderRadius: 6,
+                  padding: "9px 22px",
+                }}>View on Amazon →</a>
+              )}
             </div>
           </div>
         ))}
@@ -496,7 +504,7 @@ function BooksPage() {
         <h1 style={{
           fontFamily: "'Playfair Display', serif", fontSize: "clamp(32px, 5vw, 52px)",
           fontWeight: 700, color: "#FAFAF8", marginBottom: 20, lineHeight: 1.1,
-        }}>800+ Titles and Counting</h1>
+        }}>1,000+ Titles and Counting</h1>
         <p style={{
           fontFamily: "'DM Sans', sans-serif", fontSize: 17, color: "rgba(255,255,255,0.5)",
           lineHeight: 1.65, marginBottom: 60, maxWidth: 600,
@@ -607,7 +615,7 @@ function AboutPage() {
             and craft that readers demand.
           </p>
           <p>
-            The result: over 800 titles across six languages, reaching millions of readers every month.
+            The result: over 1,000 titles across six languages, reaching millions of readers every month.
           </p>
         </div>
 
