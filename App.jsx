@@ -609,9 +609,9 @@ function AboutPage() {
             the platform, support, and reach to find their audience at scale.
           </p>
           <p style={{ marginBottom: 20 }}>
-            We combine experienced editorial teams with proprietary production technology to help
-            our authors publish high-quality books faster — without sacrificing the emotional depth
-            and craft that readers demand.
+            We’re a team of book lovers who work closely with our authors every step of the way,
+            from the first draft to publication. Our goal is simple: publish books that make readers
+            kick their feet and stay up way too late.
           </p>
           <p>
             The result: over 1,000 titles across six languages, reaching millions of readers every month.
