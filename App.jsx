@@ -255,6 +255,60 @@ function HomePage({ setPage }) {
         </div>
       </section>
 
+      <section style={{
+        padding: "100px clamp(20px, 5vw, 80px)",
+        borderBottom: "1px solid rgba(198,163,112,0.1)",
+      }}>
+        <div style={{
+          maxWidth: 1200, margin: "0 auto", display: "grid",
+          gridTemplateColumns: "1.15fr 0.85fr", gap: 56, alignItems: "center",
+        }} className="bestseller-grid">
+          <div style={{
+            position: "relative", aspectRatio: "4 / 3", overflow: "hidden",
+            borderRadius: 16, border: "1px solid rgba(198,163,112,0.22)",
+            boxShadow: "0 24px 70px rgba(0,0,0,0.38)", background: "#fff",
+          }}>
+            <img
+              src="/bestseller-ranking.png"
+              alt="Bookish Girl's Emergency Contact Is a Lycan King ranked number two in Amazon's Magic Romance eBooks"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "28% center", display: "block" }}
+            />
+          </div>
+          <div>
+            <div style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 500,
+              letterSpacing: "0.25em", textTransform: "uppercase",
+              color: "#C6A370", marginBottom: 16, opacity: 0.8,
+            }}>A Royali Bestseller</div>
+            <h2 style={{
+              fontFamily: "'Playfair Display', serif", fontSize: "clamp(30px, 4vw, 48px)",
+              fontWeight: 600, color: "#FAFAF8", margin: "0 0 22px", lineHeight: 1.12,
+            }}>From Our Authors to Amazon’s Top 2</h2>
+            <p style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 17,
+              color: "rgba(255,255,255,0.58)", lineHeight: 1.7, margin: "0 0 12px",
+            }}>
+              <em>Bookish Girl’s Emergency Contact Is a Lycan King</em> reached #2 in Amazon’s
+              Magic Romance eBooks, alongside some of the biggest names in romance.
+            </p>
+            <div style={{
+              fontFamily: "'DM Sans', sans-serif", fontSize: 12,
+              color: "rgba(255,255,255,0.3)", marginBottom: 28,
+            }}>Ranking shown August 15, 2026.</div>
+            <a
+              href="https://www.amazon.com/s?k=Bookish+Girl%27s+Emergency+Contact+Is+a+Lycan+King&i=digital-text"
+              target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-block", fontFamily: "'DM Sans', sans-serif", fontSize: 14,
+                fontWeight: 600, background: "linear-gradient(135deg, #C6A370, #8B6914)",
+                color: "#0A0A0C", textDecoration: "none", borderRadius: 8,
+                padding: "13px 30px", boxShadow: "0 4px 24px rgba(198,163,112,0.2)",
+              }}
+            >Shop on Amazon →</a>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: "100px clamp(20px, 5vw, 80px)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{
@@ -752,6 +806,7 @@ export default function RoyaliPublishing() {
           .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
           .hero-grid > div:last-child { justify-content: center !important; margin-top: 40px; }
           .hero-grid button { margin: 0 auto; }
+          .bestseller-grid { grid-template-columns: 1fr !important; }
           .author-card-grid { grid-template-columns: 1fr !important; text-align: center; }
           .author-card-grid > div:first-child { justify-content: center; }
         }
