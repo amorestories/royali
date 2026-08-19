@@ -10,6 +10,18 @@ const COVERS = [
   { src: COVER1, title: "Lycan King's Rejected Bookish Mate", author: "Elara Haze & K.A. Iris" },
   { src: COVER2, title: "Rejected by the Alpha King", author: "K.A. Iris" },
   { src: COVER3, title: "Highlander Lycan King's Rejected Bookish Mate", author: "Elara Haze & K.A. Iris" },
+  {
+    src: "https://m.media-amazon.com/images/I/51Vw4MBiikL._SY445_SX342_QL70_FMwebp_.jpg",
+    title: "Bookish Girl’s Emergency Contact Is a Vampire",
+    author: "Zola Lore & Lira Flux",
+    url: "https://www.amazon.com/dp/B0HFM38LWP",
+  },
+  {
+    src: "https://m.media-amazon.com/images/I/51fko6VgDfL._SY445_SX342_QL70_FMwebp_.jpg",
+    title: "Lycan King Billionaire’s Runaway Rejected Bookish Mate",
+    author: "Destiny Lyre & Kiara Sere",
+    url: "https://www.amazon.com/dp/B0H74P7FRQ",
+  },
 ];
 
 const AUTHORS = [
@@ -34,7 +46,7 @@ const AUTHORS = [
 const STATS = [
   { label: "Titles Published", value: "1,000+" },
   { label: "Languages", value: "6" },
-  { label: "Authors", value: "10+" },
+  { label: "Authors", value: "25+" },
 ];
 
 
@@ -139,7 +151,7 @@ function NavBar({ page, setPage, scrolled }) {
 
 function CoverCard({ cover, size = "normal" }) {
   const h = size === "large" ? 340 : size === "small" ? 200 : 260;
-  return (
+  const card = (
     <div style={{
       borderRadius: 8, overflow: "hidden", position: "relative",
       boxShadow: "0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(198,163,112,0.1)",
@@ -154,6 +166,11 @@ function CoverCard({ cover, size = "normal" }) {
       }} />
     </div>
   );
+  return cover.url ? (
+    <a href={cover.url} target="_blank" rel="noopener noreferrer" aria-label={`View ${cover.title} on Amazon`} style={{ display: "block", textDecoration: "none" }}>
+      {card}
+    </a>
+  ) : card;
 }
 
 function HomePage({ setPage }) {
@@ -264,14 +281,14 @@ function HomePage({ setPage }) {
           gridTemplateColumns: "1.15fr 0.85fr", gap: 56, alignItems: "center",
         }} className="bestseller-grid">
           <div style={{
-            position: "relative", aspectRatio: "4 / 3", overflow: "hidden",
+            position: "relative", aspectRatio: "1.95 / 1", overflow: "hidden",
             borderRadius: 16, border: "1px solid rgba(198,163,112,0.22)",
             boxShadow: "0 24px 70px rgba(0,0,0,0.38)", background: "#fff",
           }}>
             <img
               src="/bestseller-ranking.png"
               alt="Bookish Girl's Emergency Contact Is a Lycan King ranked number two in Amazon's Magic Romance eBooks"
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "28% center", display: "block" }}
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "left center", display: "block" }}
             />
           </div>
           <div>
@@ -398,7 +415,7 @@ function HomePage({ setPage }) {
           overflowX: "auto", scrollSnapType: "x mandatory",
           WebkitOverflowScrolling: "touch", paddingBottom: 20,
         }}>
-          {[...COVERS, ...COVERS, ...COVERS].map((c, i) => (
+          {COVERS.map((c, i) => (
             <div key={i} style={{ scrollSnapAlign: "start", flexShrink: 0 }}>
               <CoverCard cover={c} size="normal" />
               <div style={{ marginTop: 12, maxWidth: 170 }}>
@@ -568,18 +585,19 @@ function BooksPage() {
           display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: 24,
           marginBottom: 80,
         }}>
-          {[...COVERS, ...COVERS, ...COVERS].map((c, i) => (
+          {COVERS.map((c, i) => (
             <div key={i}>
-              <div style={{
+              <a href={c.url || undefined} target={c.url ? "_blank" : undefined} rel={c.url ? "noopener noreferrer" : undefined} style={{
+                display: "block",
                 borderRadius: 8, overflow: "hidden",
                 boxShadow: "0 6px 24px rgba(0,0,0,0.35)",
-                transition: "transform 0.3s", cursor: "pointer",
+                transition: "transform 0.3s", cursor: c.url ? "pointer" : "default",
               }}
               onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
               onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
               >
                 <img src={c.src} alt={c.title} style={{ width: "100%", height: "auto", display: "block" }} />
-              </div>
+              </a>
               <div style={{ marginTop: 10 }}>
                 <div style={{
                   fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
